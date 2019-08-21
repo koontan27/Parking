@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">ParkingSlot</string>
-    <string name="empty_slot1">EMPTY</string>
-    <string name="empty_slot2">EMPTY</string>
-    <string name="empty_slot3">EMPTY</string>
-    <string name="edit_text1">ทะเเบียนรถ</string>
-    <string name="edit_text2">ยี่ห้อรถ</string>
-    <string name="edit_text3">เจ้าของรถ</string>
-    <string name="button_submit">SUBMIT</string>
-    <string name="button_cancel">CANCEL</string>
+    <string name="empty1">EMPTY</string>
+    <string name="empty2">EMPTY</string>
+    <string name="empty3">EMPTY</string>
+    <string name="plate">ทะเบียนรถ</string>
+    <string name="brand">ยี่ห้อรถ</string>
+    <string name="owner">เจ้าของรถ</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
 </resources>
