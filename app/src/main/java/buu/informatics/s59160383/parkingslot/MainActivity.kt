@@ -41,12 +41,17 @@ class MainActivity : AppCompatActivity() {
         var brandname = brand.text
         var name = owner.text
         findViewById<Button>(R.id.button_update).setOnClickListener {
+            book.removeAt(0)
             book.add(0, Booking(platenum.toString(), brandname.toString(), name.toString()))
             empty1.setText(book.get(0).plate).toString()
-
-            findViewById<Button>(R.id.button_delete).setOnClickListener {
-                deleteButton()
-            }
+        }
+        findViewById<Button>(R.id.button_delete).setOnClickListener {
+            book.removeAt(0)
+            book.add(0, Booking("", "", ""))
+            empty1.setText("EMPTY").toString()
+            plate.setText("")
+            brand.setText("")
+            owner.setText("")
         }
     }
     private fun emptyButton2(){
@@ -63,12 +68,18 @@ class MainActivity : AppCompatActivity() {
         var brandname = brand.text
         var name = owner.text
         findViewById<Button>(R.id.button_update).setOnClickListener {
+            book.removeAt(1)
             book.add(1, Booking(platenum.toString(), brandname.toString(), name.toString()))
             empty2.setText(book.get(1).plate).toString()
 
-            findViewById<Button>(R.id.button_delete).setOnClickListener {
-                deleteButton()
-            }
+        }
+        findViewById<Button>(R.id.button_delete).setOnClickListener {
+            book.removeAt(1)
+            book.add(1, Booking("", "", ""))
+            empty2.setText("EMPTY").toString()
+            plate.setText("")
+            brand.setText("")
+            owner.setText("")
         }
     }
     private fun emptyButton3(){
@@ -85,21 +96,17 @@ class MainActivity : AppCompatActivity() {
         var brandname = brand.text
         var name = owner.text
         findViewById<Button>(R.id.button_update).setOnClickListener {
+            book.removeAt(2)
             book.add(2, Booking(platenum.toString(), brandname.toString(), name.toString()))
             empty3.setText(book.get(2).plate).toString()
-
-            findViewById<Button>(R.id.button_delete).setOnClickListener {
-                deleteButton()
-            }
+        }
+        findViewById<Button>(R.id.button_delete).setOnClickListener {
+            book.removeAt(2)
+            book.add(2, Booking("", "", ""))
+            empty3.setText("EMPTY").toString()
+            plate.setText("")
+            brand.setText("")
+            owner.setText("")
         }
     }
-    private fun deleteButton(){
-        val plate = findViewById<EditText>(R.id.plate_edit)
-        val brand = findViewById<EditText>(R.id.brand_edit)
-        val owner = findViewById<EditText>(R.id.owner_edit)
-        plate.setText("")
-        brand.setText("")
-        owner.setText("")
-    }
-
 }
